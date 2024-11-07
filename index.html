@@ -17,6 +17,7 @@
             min-height: 100vh;
             width: 100%;
             padding: 10px 10%;
+            overflow: hidden;
         }
         
         h1 {
@@ -50,6 +51,7 @@
         
         .home-content {
             max-width: 400px;
+        
         }
         
         .home-content p {
@@ -73,7 +75,22 @@
             .home {
                 flex-direction: column;
             }
+            .home-content h2 {
+                font-size: 30px;
+                
+            }
+            .home img {
+                height: 70vw;
+                
+            }
+
         }
+        @media (max-width: 488px) {
+           nav ul{
+            display: none;
+           }
+        }
+        
         
         .anim {
             opacity: 0;
@@ -302,6 +319,7 @@
       <section class="home">
            <div class="home-content">
         <h2 class="anim">Unstoppable. Unmatched. Unbreakable.</h2>
+        
         <p class="anim">
             Genius. Visionary. Self-made legend. I don’t just face challenges; I rewrite them. From the depths of defeat to the heights of triumph, I’m here to shape a future no one else dares to imagine. Powered by intellect, driven by purpose, and armored with resilience — nothing is beyond reach. The question isn't if I can; it’s if *you’re* ready.
         </p>
@@ -408,33 +426,13 @@
             "Pushing the boundaries of technology and innovation. Engineering a brighter, smarter future."
         </p>
 
-        <!-- Quick Links -->
-        <div class="footer-links">
-            <a href="#about">About Us</a>
-            <a href="#projects">Projects</a>
-            <a href="#team">Our Team</a>
-            <a href="#media">Media</a>
-            <a href="#careers">Careers</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-
-        <!-- Technology Showcase -->
-        <div class="footer-tech-showcase">
-            <h3>Powered by Stark Innovations</h3>
-            <p>
-                Arc Reactor Technology | J.A.R.V.I.S. AI Systems | Holographic Interface | Advanced Weaponry R&D | Clean Energy Solutions
-            </p>
-        </div>
+       
 
         <!-- Social Media Icons -->
         
 
         <!-- Contact Info -->
-        <div class="footer-contact">
-            <p>Email: <a href="mailto:info@starkindustries.com">info@starkindustries.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-            <p>Location: Stark Tower, Manhattan, New York</p>
-        </div>
+       
 
         <!-- Copyright -->
         <div class="footer-copyright">
