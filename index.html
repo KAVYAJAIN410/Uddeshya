@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: rgb(228, 249, 245);
+            min-height: 100vh;
+            width: 100%;
+            padding: 10px 10%;
+        }
+        
+        h1 {
+            color: rgb(102, 191, 191);
+            font-family: Sacramento, cursive;
+        }
+        
+        nav {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        nav ul li {
+            list-style: none;
+            display: inline;
+            margin: 10px 15px;
+            cursor: pointer;
+            color: rgb(102, 191, 191);
+            font-weight: bold;
+        }
+        
+        /* Home Section */
+        .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .home-content {
+            max-width: 400px;
+        }
+        
+        .home-content p {
+            font-size: 18px;
+            line-height: 1.5;
+            animation-delay: 1s;
+        }
+        
+        .home-content h2 {
+            font-size: 70px;
+            animation-delay: 0.5s;
+        }
+        
+        .home img {
+            height: 50vw;
+            margin-top: 30px;
+            animation-delay: 1.5s;
+        }
+        
+        @media (max-width: 1008px) {
+            .home {
+                flex-direction: column;
+            }
+        }
+        
+        .anim {
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: moveup 0.5s linear forwards;
+        }
+        
+        @keyframes moveup {
+            100% {
+                opacity: 1;
+                transform: translate(0px);
+            }
+        }
+        
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background-color: #1b1b1b;
+            color: #e6e6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+         }
+      
+         .about div {
+            margin: 20px;
+         }
+      
+         .about img {
+            width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+         }
+      
+         .about img:hover {
+            transform: scale(1.05);
+         }
+      
+         .about-text {
+            max-width: 600px;
+         }
+      
+         .about-text p {
+            font-size: 1.8em;
+            line-height: 1.6;
+            font-weight: bold;
+         }
+      
+         .quote {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #ff8c00;
+            margin-top: 15px;
+         }
+      
+         /* Responsive adjustments */
+         @media screen and (max-width: 768px) {
+            .about {
+               flex-direction: column;
+               text-align: center;
+               padding: 20px;
+            }
+      
+            .about img {
+               width: 250px;
+            }
+      
+            .about-text p {
+               font-size: 1.5em;
+            }
+         }
+        /* Iron Man Suits Section */
+        .suits-section {
+            padding: 40px 10%;
+            text-align: center;
+            background-color: rgb(245, 245, 245);
+        }
+        
+        .suits-section h2 {
+            color: rgb(102, 191, 191);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: Sacramento, cursive;
+        }
+        
+        .suits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .suit-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .suit-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .suit-card h3 {
+            color: rgb(102, 191, 191);
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        
+        .suit-card p {
+            font-size: 0.9em;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        .suit-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Responsive Design for Suits Section */
+        @media (max-width: 768px) {
+            .suits-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* Footer Styles */
+.stark-footer {
+    background: rgb(18, 18, 18);
+    color: rgb(102, 191, 191);
+    padding: 40px 10%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Logo Section */
+.footer-logo img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Mission Statement */
+.footer-mission {
+    color: rgb(144, 144, 144);
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Quick Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-links a {
+    color: rgb(102, 191, 191);
+    text-decoration: none;
+}
+
+/* Technology Showcase */
+.footer-tech-showcase h3 {
+    color: rgb(102, 191, 191);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-tech-showcase p {
+    color: rgb(144, 144, 144);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+
+/* Contact Info */
+.footer-contact {
+    color: rgb(144, 144, 144);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-contact a {
+    color: rgb(102, 191, 191);
+    text-decoration: none;
+}
+
+/* Copyright */
+.footer-copyright {
+    font-size: 13px;
+    color: rgb(80, 80, 80);
+    margin-top: 30px;
+}
+
+
+    </style>
+</head>
+<body>
+   <div class="hero">
+      <nav>
+        <h1>I'm Kavya</h1>
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Contact us</li>
+        </ul>
+      </nav>
+      <section class="home">
+           <div class="home-content">
+        <h2 class="anim">Unstoppable. Unmatched. Unbreakable.</h2>
+        <p class="anim">
+            Genius. Visionary. Self-made legend. I don’t just face challenges; I rewrite them. From the depths of defeat to the heights of triumph, I’m here to shape a future no one else dares to imagine. Powered by intellect, driven by purpose, and armored with resilience — nothing is beyond reach. The question isn't if I can; it’s if *you’re* ready.
+        </p>
+    </div>
+          <div>
+            <img src="./5df275d38615e368658a5664c44c0cad.png" class="anim" alt="Developer Image">
+          </div>
+      </section>
+   </div>
+   
+   <div class="about">
+    <div>
+       <img src="./avengers-age-of-ultron-the-avengers-tony-stark-robert-downey-jr-wallpaper-preview.jpg" alt="Tony Stark Image">
+    </div>
+    <div class="about-text">
+       <p>I am Tony Stark, billionaire, playboy, philanthropist, and futurist. <br> Saving the world is a hobby; reshaping it, that’s just the day job.</p>
+       <p class="quote">"I am Iron Man."</p>
+    </div>
+ </div>
+   
+   <!-- Iron Man Suits Section -->
+   <div class="suits-section">
+       <h2>Iron Man Suits</h2>
+       <div class="suits-container">
+           <div class="suit-card">
+               <img src="./Ch-200003885000.webp" alt="Mark 1 Suit">
+               <h3>Mark I</h3>
+               <p>The original suit Tony Stark built in captivity, designed to escape his captors.</p>
+           </div>
+           <div class="suit-card" class="anim">
+               <img src="./Hot_Toys_IM_MK_2_Transparent.webp" alt="Mark 2 Suit">
+               <h3>Mark II</h3>
+               <p>The first suit with flight capabilities, setting the foundation for future upgrades.</p>
+           </div>
+           <div class="suit-card" class="anim">
+               <img src="./Hot_Toys_IM_MK_3_Transparent.webp" alt="Mark 3 Suit">
+               <h3>Mark III</h3>
+               <p>The first suit to include the red and gold color scheme, with advanced weaponry.</p>
+           </div>
+           <div class="suit-card" class="anim">
+               <img src="./Mark_4_suit_transparent.webp" alt="Mark 4 Suit">
+               <h3>Mark IV</h3>
+               <p>An upgraded model with improved flight and combat capabilities.</p>
+           </div>
+           <!-- Additional Suits -->
+        
+           <div class="suit-card">
+               <img src="./Iron_Man_Armor_-_Mark_LXXXV.webp" alt="Mark 85 Suit">
+               <h3>Mark LXXXV</h3>
+               <p>The final suit, designed with advanced nanotechnology and combat-ready.</p>
+           </div>
+       </div>
+   </div>
+   <!-- Stark Feedback Console -->
+<div class="suits-section">
+    <h2>Stark Feedback Console</h2>
+    <p>Hey there, future Avenger! Share your thoughts with Stark Industries.</p>
+    <form action="#" method="post" style="max-width: 600px; margin: 0 auto; text-align: left; background: rgb(228, 249, 245); padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        
+        <!-- Alias (Name) -->
+        <label for="alias" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Codename (Alias):</label>
+        <input type="text" id="alias" name="alias" placeholder="e.g., War Machine" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);">
+
+        <!-- Contact for Avengers Initiative (Email) -->
+        <label for="contact" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Contact for Avengers Initiative:</label>
+        <input type="email" id="contact" name="contact" placeholder="e.g., stark@avengers.com" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);">
+
+        <!-- Favorite Suit -->
+        <label for="favorite-suit" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Favorite Iron Man Suit:</label>
+        <select id="favorite-suit" name="favorite-suit" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);">
+            <option value="">Choose a suit...</option>
+            <option value="mark1">Mark I - The Original</option>
+            <option value="mark3">Mark III - Red & Gold</option>
+            <option value="mark42">Mark XLII - Remote Control</option>
+            <option value="mark85">Mark LXXXV - Final Battle</option>
+            <option value="nanotech">Nanotech Suit - Mark L</option>
+        </select>
+
+        <!-- Arc Reactor Rating (Feedback Rating) -->
+        <label for="arc-rating" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Arc Reactor Rating:</label>
+        <input type="range" id="arc-rating" name="arc-rating" min="1" max="10" style="width: 100%; margin-bottom: 15px;">
+        <small style="color: rgb(102, 191, 191);">How powerful was your experience? (1 - Low Power, 10 - Full Power)</small>
+
+        <!-- Message to Stark (Comments) -->
+        <label for="message" style="display: block; margin-top: 15px; font-weight: bold; color: rgb(102, 191, 191);">Message to Stark:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Share your thoughts with Tony..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" style="margin-top: 20px; padding: 10px 20px; background-color: rgb(102, 191, 191); color: white; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;">
+            Send to Stark
+        </button>
+    </form>
+</div>
+<!-- Stark Industries Footer -->
+<footer class="stark-footer">
+    <div class="footer-container">
+        <!-- Stark Industries Logo -->
+        <div class="footer-logo">
+            <img src="./pngegg (16).png" alt="Stark Industries Logo">
+        </div>
+
+        <!-- Mission Statement -->
+        <p class="footer-mission">
+            "Pushing the boundaries of technology and innovation. Engineering a brighter, smarter future."
+        </p>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#projects">Projects</a>
+            <a href="#team">Our Team</a>
+            <a href="#media">Media</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+
+        <!-- Technology Showcase -->
+        <div class="footer-tech-showcase">
+            <h3>Powered by Stark Innovations</h3>
+            <p>
+                Arc Reactor Technology | J.A.R.V.I.S. AI Systems | Holographic Interface | Advanced Weaponry R&D | Clean Energy Solutions
+            </p>
+        </div>
+
+        <!-- Social Media Icons -->
+        
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:info@starkindustries.com">info@starkindustries.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Location: Stark Tower, Manhattan, New York</p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            &copy; 2024 Stark Industries. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
