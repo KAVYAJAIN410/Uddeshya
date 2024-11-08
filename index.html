@@ -57,7 +57,7 @@
         .home-content p {
             font-size: 18px;
             line-height: 1.5;
-            animation-delay: 1s;
+           
         }
         
         .home-content h2 {
@@ -174,7 +174,7 @@
         
         .suits-section h2 {
             color: rgb(102, 191, 191);
-            font-size: 2.5em;
+            font-size: 40px;
             margin-bottom: 20px;
             font-family: Sacramento, cursive;
         }
@@ -189,11 +189,10 @@
         .suit-card {
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 200px;
             padding: 15px;
             text-align: center;
-            transition: transform 0.3s;
+            
         }
         
         .suit-card img {
@@ -205,29 +204,54 @@
         
         .suit-card h3 {
             color: rgb(102, 191, 191);
-            font-size: 1.5em;
+            font-size: 25px;
             margin: 10px 0;
         }
         
         .suit-card p {
-            font-size: 0.9em;
+            font-size: 15px;
             color: #333;
             line-height: 1.4;
         }
         
-        .suit-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+       
+        /* Responsive Design for Suits Section */
+ 
+        .form-section {
+            margin: auto; /* to align form in center*/
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px; 
+            height: 700px;
+            padding: 30px;
+            background: #e4f9f5;
+            border-radius: 8px;
+            text-align: center;
         }
         
-        /* Responsive Design for Suits Section */
-        @media (max-width: 768px) {
-            .suits-container {
-                flex-direction: column;
-                align-items: center;
-            }
+        h2, p {
+            margin-bottom: 15px;
+            color: #333;
         }
-        /* Footer Styles */
+        input, textarea {
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 50px
+        }
+        
+        button {
+            padding: 12px;
+            background: #ff4b5c;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
 .stark-footer {
     background: rgb(18, 18, 18);
     color: rgb(102, 191, 191);
@@ -245,55 +269,6 @@
 .footer-logo img {
     height: 80px;
     margin-bottom: 20px;
-}
-
-/* Mission Statement */
-.footer-mission {
-    color: rgb(144, 144, 144);
-    margin-bottom: 30px;
-    font-size: 16px;
-}
-
-/* Quick Links */
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-.footer-links a {
-    color: rgb(102, 191, 191);
-    text-decoration: none;
-}
-
-/* Technology Showcase */
-.footer-tech-showcase h3 {
-    color: rgb(102, 191, 191);
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.footer-tech-showcase p {
-    color: rgb(144, 144, 144);
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-
-
-/* Contact Info */
-.footer-contact {
-    color: rgb(144, 144, 144);
-    font-size: 14px;
-    margin-top: 20px;
-}
-
-.footer-contact a {
-    color: rgb(102, 191, 191);
-    text-decoration: none;
 }
 
 /* Copyright */
@@ -374,43 +349,20 @@
        </div>
    </div>
    <!-- Stark Feedback Console -->
-<div class="suits-section">
+   <div class="form-section">
     <h2>Stark Feedback Console</h2>
     <p>Hey there, future Avenger! Share your thoughts with Stark Industries.</p>
-    <form action="#" method="post" style="max-width: 600px; margin: 0 auto; text-align: left; background: rgb(228, 249, 245); padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
         
-        <!-- Alias (Name) -->
-        <label for="alias" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Codename (Alias):</label>
-        <input type="text" id="alias" name="alias" placeholder="e.g., War Machine" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);">
-
-        <!-- Contact for Avengers Initiative (Email) -->
-        <label for="contact" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Contact for Avengers Initiative:</label>
-        <input type="email" id="contact" name="contact" placeholder="e.g., stark@avengers.com" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);">
-
-        <!-- Favorite Suit -->
-        <label for="favorite-suit" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Favorite Iron Man Suit:</label>
-        <select id="favorite-suit" name="favorite-suit" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);">
-            <option value="">Choose a suit...</option>
-            <option value="mark1">Mark I - The Original</option>
-            <option value="mark3">Mark III - Red & Gold</option>
-            <option value="mark42">Mark XLII - Remote Control</option>
-            <option value="mark85">Mark LXXXV - Final Battle</option>
-            <option value="nanotech">Nanotech Suit - Mark L</option>
-        </select>
-
-        <!-- Arc Reactor Rating (Feedback Rating) -->
-        <label for="arc-rating" style="display: block; margin-bottom: 8px; font-weight: bold; color: rgb(102, 191, 191);">Arc Reactor Rating:</label>
-        <input type="range" id="arc-rating" name="arc-rating" min="1" max="10" style="width: 100%; margin-bottom: 15px;">
-        <small style="color: rgb(102, 191, 191);">How powerful was your experience? (1 - Low Power, 10 - Full Power)</small>
-
-        <!-- Message to Stark (Comments) -->
-        <label for="message" style="display: block; margin-top: 15px; font-weight: bold; color: rgb(102, 191, 191);">Message to Stark:</label>
-        <textarea id="message" name="message" rows="4" placeholder="Share your thoughts with Tony..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid rgb(102, 191, 191);"></textarea>
-
-        <!-- Submit Button -->
-        <button type="submit" style="margin-top: 20px; padding: 10px 20px; background-color: rgb(102, 191, 191); color: white; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;">
-            Send to Stark
-        </button>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+        
+        <button type="submit">Submit Feedback</button>
     </form>
 </div>
 <!-- Stark Industries Footer -->
@@ -425,16 +377,6 @@
         <p class="footer-mission">
             "Pushing the boundaries of technology and innovation. Engineering a brighter, smarter future."
         </p>
-
-       
-
-        <!-- Social Media Icons -->
-        
-
-        <!-- Contact Info -->
-       
-
-        <!-- Copyright -->
         <div class="footer-copyright">
             &copy; 2024 Stark Industries. All Rights Reserved.
         </div>
